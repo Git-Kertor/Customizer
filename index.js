@@ -5,7 +5,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const fs = require("fs");
 require("dotenv").config();
 
-const { token } = require("./config.js");
+const token = process.env.token;
 const { setCommands } = require("./commands/help.js")
 const { prefix } = require("./config.js");
 const commands = {};
