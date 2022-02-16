@@ -3,10 +3,10 @@ const { prefix } = require("../config.js");
 
 var fs = require('fs');
 var path = require('path');
-var truePath = path.join(__dirname, '../runes.txt');
+var runePath = path.join(__dirname, '../runes.txt');
 
-var data = fs.readFileSync(truePath);
-var dataS = data.toString().split("\n");
+var dataR = fs.readFileSync(runePath);
+var dataS = dataR.toString().split("\n");
 
 let commands = {};
 
