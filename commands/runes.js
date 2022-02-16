@@ -6,7 +6,7 @@ var path = require('path');
 var truePath = path.join(__dirname, '../runes.txt');
 
 var data = fs.readFileSync(truePath);
-splits = data.toString().split("\n");
+var dataS = data.toString().split("\n");
 
 let commands = {};
 
@@ -18,17 +18,16 @@ module.exports = {
   name: "runes",
   description: "randomRunes",
   execute: (message, args) => {   
-    return;
     var teamSize = parseInt(args[0]);
     var str = "";
     str += "Team One: ";
     for(let i = 0; i < teamSize; i++) {
-      str += splits[getRandomInt(splits.length)];
+      str += splits[getRandomInt(dataS.length)];
       if(i < teamSize - 1) {str += ", ";}
     }
     str += "\nTeam Two: ";
     for(let i = 0; i < teamSize; i++) {
-      str += splits[getRandomInt(splits.length)];
+      str += splits[getRandomInt(dataS.length)];
       if(i < teamSize - 1) {str += ", ";}
     }
     message.channel.send(str);
