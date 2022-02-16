@@ -18,6 +18,7 @@ module.exports = {
   name: "runes",
   description: "randomRunes",
   execute: (message, args) => {   
+    return;
     var teamSize = parseInt(args[0]);
     var str = "";
     str += "Team One: ";
