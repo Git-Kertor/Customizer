@@ -24,12 +24,12 @@ module.exports = {
       str += "Team One: ";
       for(let i = 0; i < args.length / 2; i++) {
         str += args[i];
-      if(i < shuffled_one.length - 1) {str += ", ";}
+      if(i < args.length / 2 - 1) {str += ", ";}
       }
       str += "\nTeam Two: "
       for(let i = args.length / 2; i < args.length; i++) {
         str += args[i];
-      if(i < shuffled_two.length - 1) {str += ", ";}
+      if(i < args.length - 1) {str += ", ";}
     }
       message.channel.send(str);
       return;
