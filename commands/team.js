@@ -18,6 +18,22 @@ module.exports = {
   name: "team",
   description: "randomTeamComp",
   execute: (message, args) => {    
+    if(args.length > 1) {
+      args = args.sort(() => Math.random() - Math.random());
+      var str = "";
+      str += "Team One: ";
+      for(let i = 0; i < args.length / 2; i++) {
+        str += args[i];
+      if(i < shuffled_one.length - 1) {str += ", ";}
+      }
+      str += "\nTeam Two: "
+      for(let i = args.length / 2; i < args.length; i++) {
+        str += args[i];
+      if(i < shuffled_two.length - 1) {str += ", ";}
+    }
+      message.channel.send(str);
+      return;
+    }
     args[0] = parseInt(args[0]);
     var shuffled_one = splits.sort(() => Math.random() - Math.random()).slice(0, args);
     var shuffled_two = splits.sort(() => Math.random() - Math.random()).slice(0, args);
