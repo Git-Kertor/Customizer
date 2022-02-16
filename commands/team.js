@@ -25,12 +25,12 @@ module.exports = {
     str += "Team One: "
     for(let i = 0; i < shuffled_one.length; i++) {
       str += shuffled_one[i];
-      if(i < shuffled_one.length - 1) {str += ",";}
+      if(i < shuffled_one.length - 1) {str += ", ";}
     }
     str += "\nTeam Two: "
     for(let i = 0; i < shuffled_two.length; i++) {
       str += shuffled_two[i];
-      if(i < shuffled_two.length - 1) {str += ",";}
+      if(i < shuffled_two.length - 1) {str += ", ";}
     }
     str += " ";
     message.channel.send(str);
