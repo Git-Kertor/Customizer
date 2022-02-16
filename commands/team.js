@@ -15,9 +15,24 @@ function getRandomInt(max) {
 }
 
 module.exports = {
-  name: "champion",
-  description: "randomChampion",
+  name: "team",
+  description: "randomTeamComp",
   execute: (message, args) => {    
-    message.channel.send(splits[getRandomInt(splits.length)]);
+    if(typeof args !== 'int') {return;}
+    var shuffled_one = splits.sort(() => Math.random() - Math.random()).slice(0, args);
+    var shuffled_two = splits.sort(() => Math.random() - Math.random()).slice(0, args);
+    var str = "";
+    str += "Team One: "
+    for(let i = 0; i < shuffled_one.length; i++) {
+      str += shuffled_one[i];
+      if(i < shuffled_one.length - 1) {str += ",";}
+    }
+    str += "Team Two: "
+    for(let i = 0; i < shuffled_two.length; i++) {
+      str += shuffled_two[i];
+      if(i < shuffled_two.length - 1) {str += ",";}
+    }
+    str += " ";
+    message.channel.send(str);
   },
 }
