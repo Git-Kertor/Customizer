@@ -22,12 +22,12 @@ module.exports = {
     var str = "";
     str += "Team One: ";
     for(let i = 0; i < teamSize; i++) {
-      str += splits[getRandomInt(dataS.length)];
+      str += dataS[getRandomInt(dataS.length)];
       if(i < teamSize - 1) {str += ", ";}
     }
     str += "\nTeam Two: ";
     for(let i = 0; i < teamSize; i++) {
-      str += splits[getRandomInt(dataS.length)];
+      str += dataS[getRandomInt(dataS.length)];
       if(i < teamSize - 1) {str += ", ";}
     }
     message.channel.send(str);
