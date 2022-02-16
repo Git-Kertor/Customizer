@@ -27,7 +27,7 @@ module.exports = {
       str += shuffled_one[i];
       if(i < shuffled_one.length - 1) {str += ",";}
     }
-    str += "Team Two: "
+    str += "\nTeam Two: "
     for(let i = 0; i < shuffled_two.length; i++) {
       str += shuffled_two[i];
       if(i < shuffled_two.length - 1) {str += ",";}
