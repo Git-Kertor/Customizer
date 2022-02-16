@@ -18,7 +18,7 @@ module.exports = {
   name: "team",
   description: "randomTeamComp",
   execute: (message, args) => {    
-    if(typeof args !== 'int') {return;}
+    args[0] = parseInt(args[0]);
     var shuffled_one = splits.sort(() => Math.random() - Math.random()).slice(0, args);
     var shuffled_two = splits.sort(() => Math.random() - Math.random()).slice(0, args);
     var str = "";
