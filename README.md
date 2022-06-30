@@ -1,5 +1,4 @@
 # Customizer
-A Discord Bot, which make League of Legends custom games more entertaining
 Currently has 3 commands
 Use !champion for a random champion
 Use !teams name 1, name 2, name 3, name 4 etc... for a random team distribution
